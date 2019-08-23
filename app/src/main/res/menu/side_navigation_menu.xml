@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/navigation_side_home"
+      android:icon="@mipmap/home_icon"
+        android:iconTint="@color/black"
+        android:title="@string/home_string"/>
+
+    <item
+        android:id="@+id/navigation_side_view_profile"
+        android:icon="@drawable/eye_icon"
+        android:title="@string/view_profile_string"/>
+
+
+    <item
+        android:id="@+id/navigation_side_search"
+        android:title="@string/find_friends_string"
+        android:iconTint="@color/black"
+        android:icon="@mipmap/search_icon"
+        />
+
+    <item
+        android:id="@+id/navigation_side_users"
+        android:title="@string/users_string"
+        android:iconTint="@color/black"
+        android:icon="@mipmap/users_icon"
+         />
+
+
+    <item
+        android:id="@+id/navigation_side_message"
+        android:title="@string/messages_string"
+        android:icon="@mipmap/message_icon"
+        android:iconTint="@color/black"
+        />
+    <item
+        android:id="@+id/navigation_side_settings"
+        android:title="@string/settings_string"
+        android:icon="@mipmap/settings_icon"
+        android:iconTint="@color/black"
+         />
+    <item
+        android:id="@+id/navigation_side_write"
+        android:title="@string/write_string"
+        android:icon="@mipmap/write_icon"
+        android:iconTint="@color/black"
+        />
+
+    <item
+        android:id="@+id/navigation_side_privacy"
+        android:title="@string/privacy_string"
+        android:icon="@drawable/privacy_icon"
+        android:iconTint="@color/black"
+        />
+
+    <item
+        android:id="@+id/navigation_side_terms"
+        android:title="@string/terms_string"
+        android:icon="@drawable/conditions_icon"
+        android:iconTint="@color/black"
+        />
+
+
+
+    <item
+        android:id="@+id/navigation_side_out"
+        android:title="@string/log_out_string"
+        android:icon="@drawable/power_off_button"
+        android:iconTint="@color/black"
+        />
+
+
+</menu>

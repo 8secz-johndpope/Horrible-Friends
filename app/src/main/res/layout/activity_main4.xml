@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.np.areebwaseem.horriblefriends.Main4Activity">
+
+    <LinearLayout
+        android:id="@+id/activ_main_4_linear_layo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView7_n_prof_view_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/tw__composer_black" />
+
+        <Button
+            android:id="@+id/button2_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile" />
+
+        <Button
+            android:id="@+id/button2_delete_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete" />
+
+
+        <Button
+            android:id="@+id/button3_sign_out_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out" />
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar_main_4_act"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf = "@id/activ_main_4_linear_layo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+        />
+</android.support.constraint.ConstraintLayout>

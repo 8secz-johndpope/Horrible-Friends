@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/comment_user_profile_pic"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/asset_four"
+        android:visibility="visible"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/comment_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/comment_background_rounded_grey"
+        android:fontFamily="@font/roboto"
+        android:maxWidth="@dimen/_220sdp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="3dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/comment_user_profile_pic"
+        app:layout_constraintTop_toTopOf="@+id/comment_user_profile_pic" />
+
+    <TextView
+        android:id="@+id/comment_text_view_hours_ago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/roboto"
+        android:text=""
+        android:textColor="@color/grey_600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/comment_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/comment_text_view" />
+
+    <TextView
+        android:id="@+id/comment_text_view_like_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/like_string"
+        android:focusable="true"
+        android:textColor="@color/grey_600"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/comment_text_view_hours_ago"
+        app:layout_constraintTop_toBottomOf="@id/comment_text_view" />
+
+    <ImageView
+        android:id="@+id/thumbs_up_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/comment_text_view_like_button"
+        app:srcCompat="@mipmap/like_icon" />
+
+    <TextView
+        android:id="@+id/no_likes_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/thumbs_up_image_view"
+        app:layout_constraintStart_toEndOf="@+id/thumbs_up_image_view"
+        app:layout_constraintTop_toTopOf="@+id/thumbs_up_image_view" />
+
+</android.support.constraint.ConstraintLayout>

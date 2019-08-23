@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item android:id="@+id/invite_friends_item"
+
+        android:title="Invite Friends"/>
+
+
+
+
+</menu>
+
+<!--
+<item
+android:id="@+id/actionMenuTextColor"
+android:icon="@drawable/options_menu_icon"
+android:orderInCategory="101"
+app:showAsAction="always"
+    >
+<menu >
+    <item android:id="@+id/about"
+        android:icon="@drawable/arrow_right_purplr"
+        android:title="About Us"/>
+
+
+    <item android:id="@+id/help"
+        android:icon="@drawable/arrow_right_purplr"
+        android:title="My Profile"/>
+
+</menu>
+
+</item>
+-->

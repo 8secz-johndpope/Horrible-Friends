@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.np.areebwaseem.horriblefriends.comment_activity">
+
+    <ListView
+        android:id="@+id/comments_list_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bott_line_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <View
+        android:id="@+id/bott_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout7"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        />
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        android:background="@drawable/layout_rounded_greyish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/new_comment_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:ems="10"
+            android:hint="@string/write_a_comment_string"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@color/black"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/send_comment_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="12dp"
+            android:background="@android:color/transparent"
+
+            android:tint="@color/colorPrimaryDark"
+            app:srcCompat="@mipmap/plane_icon" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/comment_activity_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bott_line_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/AppTheme.WhiteAccent"
+
+        />
+
+
+</android.support.constraint.ConstraintLayout>

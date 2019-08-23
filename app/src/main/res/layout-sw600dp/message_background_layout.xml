@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="4dp"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/meme_background_constraint_view_memes_list_item"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_horrible_friend_image_view"
+        android:background="@drawable/message_item_rounded_background"
+        >
+
+    <ImageView
+        android:id="@+id/meme_background_image_view_memes_list_item"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bcg_with_logo"
+        />
+
+
+    <TextView
+        android:id="@+id/meme_text_view_message_list_item"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/meme_background_image_view_memes_list_item"
+        app:layout_constraintEnd_toEndOf="@+id/meme_background_image_view_memes_list_item"
+        app:layout_constraintStart_toStartOf="@+id/meme_background_image_view_memes_list_item"
+        app:layout_constraintTop_toTopOf="@+id/meme_background_image_view_memes_list_item" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/meme_background_image_view_memes_list_item"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/image_view_small_horri"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/yellow_rectangle_very_small" />
+
+        <ImageView
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_icon_horrbile_very_small" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="#HorribleFriends"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintRight_toLeftOf="@id/constraintLayout" />
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/to_horrible_friend_image_view"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/asset_four"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@+id/star_cons_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/star_cons_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        >
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/horrible_friend_to_string"
+            android:textColor="@color/grey_600"
+            android:textSize="@dimen/_6sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="18dp"
+            android:layout_height="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="6dp"
+            android:tint="@color/yellow_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:srcCompat="@drawable/arrow_right_big_stroked" />
+
+        <TextView
+            android:id="@+id/message_list_item_to_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintTop_toTopOf="@+id/imageView12" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meme_background_constraint_view_memes_list_item">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/meme_home_list_item_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginRight="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/share_icon_black" />
+
+            <TextView
+                android:id="@+id/no_of_shares_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:background="@color/red_700"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="12"
+                android:visibility="invisible"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/meme_home_list_item_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/comment_icon_black" />
+
+            <TextView
+                android:id="@+id/no_of_comments_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:background="@color/red_700"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="12"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:visibility="invisible"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hours_ago_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text=""
+        android:textColor="@color/grey_600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meme_background_constraint_view_memes_list_item" />
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

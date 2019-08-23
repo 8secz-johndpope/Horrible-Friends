@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_bot_search_friendss"
+        android:title="Search"
+        android:icon="@mipmap/search_icon"
+        />
+
+    <item
+        android:id="@+id/navigation_bot_all_friends"
+        android:title="Friends"
+        android:icon="@mipmap/users_icon"
+        />
+
+</menu>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center_horizontal"
+            >
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                app:srcCompat="@drawable/logo_icon_horrbile_very_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/horrible_friends_string"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/top_title_phone_alert_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="40dp"
+            android:text="@string/please_update_your_email_address"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp_update_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                app:ccp_defaultNameCode="US"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="true"
+                app:ccp_showPhoneCode="false"
+                app:ccp_textGravity="LEFT" />
+
+            <EditText
+                android:id="@+id/phone_no_edit_text_update_alert"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="@string/phone"
+                android:textColor="@color/greyishBlack"
+                android:inputType="number"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/_8sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="24dp"
+            >
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cancel_button_phone_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginRight="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/cancel_button_phone_alert_dialog_act"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/cancel_string"
+                    android:textColor="@color/yellow_700"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/confirm_button_phone_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <TextView
+                    android:id="@+id/confirm_button_phone_alert_dialog_act"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/update_string"
+                    android:textColor="@color/yellow_700"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.np.areebwaseem.horriblefriends.new_meme_select_user_activity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/HeaderBar"
+        app:theme="@style/AppTheme_no_bar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:background="@drawable/status_bar_less_logo"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:elevation="4dp"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/search_new_meme_user_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/search_dot_string"
+                android:visibility="invisible"
+                android:imeOptions="actionSearch"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@color/white"
+                android:textSize="18sp"
+             />
+
+
+            <TextView
+                android:id="@+id/select_friend_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/select_horrible_friend"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <ImageButton
+                android:id="@+id/search_horrible_friends_image_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:padding="9dp"
+                android:foregroundGravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/search_icon"
+                android:backgroundTint="@android:color/transparent"
+                app:layout_constraintLeft_toRightOf="@+id/select_friend_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+        <!--
+
+    <LinearLayout
+        android:id="@+id/linear_layout_top"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+
+        >
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:layout_weight="0.15"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@mipmap/search_icon" />
+
+
+
+
+    </LinearLayout>
+    -->
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/new_meme_select_user_list_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_new_meme_select_user"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:theme="@style/AppTheme.WhiteAccent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>

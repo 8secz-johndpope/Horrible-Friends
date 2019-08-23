@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.np.areebwaseem.horriblefriends">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/backup_config"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="allowBackup">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+   
+
+        <activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity" />
+        <activity
+            android:name=".Main2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".Main3Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".Main4Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <activity android:name="com.facebook.accountkit.ui.AccountKitActivity" />
+        <activity
+            android:name=".login_email_activ"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".forgot_password_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".sign_in_email_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".more_info_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".edit_profile_later_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".home_activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="OPEN_ACTIVITY_1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".add_friend_activity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".select_user_activity" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
+
+        <activity
+            android:name=".new_meme_select_user_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".write_meme_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_bar" />
+        <activity
+            android:name=".comment_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile_view_activity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".MyFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/sb_icons" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/yellow_600" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".terms_of_use"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+
+        <activity android:name=".privacy_policy"  android:screenOrientation="portrait">
+
+        </activity>
+    </application>
+
+</manifest>
